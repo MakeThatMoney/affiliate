@@ -1,0 +1,36 @@
+{
+	"version": 3,
+	"file": "../scss/main.css",
+	"sources": [
+		"../scss/main.scss",
+		"../scss/base/_variables.scss",
+		"../scss/base/_mixins.scss",
+		"../scss/base/_normalize.scss",
+		"../scss/base/_base.scss",
+		"../scss/modules/_typography.scss",
+		"../scss/modules/_blocks.scss",
+		"../scss/modules/_buttons.scss",
+		"../scss/modules/_sections.scss",
+		"../scss/modules/_components.scss",
+		"../scss/layouts/_nav.scss",
+		"../scss/layouts/_header.scss",
+		"../scss/layouts/_footer.scss"
+	],
+	"sourcesContent": [
+		"/*\n\tSkyApp Bootstrap Sass Theme\n*/\n\n/* BASE - Base styles, variables, mixins, etc */\n\n@import 'base/_variables.scss';\n@import 'base/_mixins.scss';\n@import 'base/_normalize.scss';\n@import 'base/_base.scss';\n\n/* MODULES = Individual site Components */\n\n@import 'modules/_typography.scss';\n@import 'modules/_blocks.scss';\n@import 'modules/_buttons.scss';\n@import 'modules/_sections.scss';\n@import 'modules/_components.scss';\n\n/* LAYOUTS - Page layout styles */\n\n@import 'layouts/_nav.scss';\n@import 'layouts/_header.scss';\n@import 'layouts/_footer.scss';",
+		"/* Font Colors */\n\n$base-font-size:15px;\n$base-font-family: \"Segoe UI\" , \"Segoe WP\" , \"Segoe Regular\", sans-serif;\n$base-font-color: #666666;\n\n\n/* Background Colors */\n\n$primary-color: #00aff0;\n$secondary-color: #7fba00;\n$light-color: #e4eef2;\n$dark-color: #333333;\n",
+		"/* Mixins */\n\n\n@mixin border-radius($radius) {\n\t-moz-border-radius:$radius;\n\t-webkit-border-radius:$radius;\n\tborder-radius: $radius;\n}\n\n@mixin add-border($size,$color,$position){\n\t@if $position == 'all' {\n\t\tborder:$size solid $color;\n\t}\n\t@else if $position == 'top' {\n\t\tborder-top: $size solid $color;\n\t}\n\t@else if $position == 'bottom' {\n\t\tborder-bottom: $size solid $color;\n\t}\n\t@else if $position == 'right' {\n\t\tborder-right: $size solid $color;\n\t}\n\t@else if $position == 'left' {\n\t\tborder-left: $size solid $color;\n\t}\n\t@else if $position == 'top-bottom' {\n\t\tborder-top: $size solid $color;\n\t\tborder-bottom: $size solid $color;\n\t}\n\t@else if $position == 'right-left' {\n\t\tborder-right: $size solid $color;\n\t\tborder-left: $size solid $color;\n\t}\t\n}\n\n@mixin add-background($color){\n\tbackground:$color;\n\t@if $color == $light-color{\n\t\tcolor:#666666;\n\t} @else {\n\t\tcolor:#ffffff;\n\t}\n} ",
+		"h1,h2,h3,h4,h5 {\n\tmargin-top: 0;\n}\n\n.page-header{\n\tmargin-top: 30px;\n}",
+		"body {\n\tfont-family:$base-font-family;\n\tfont-size:$base-font-size;\n\tline-height: 1.7em;\n\tcolor: $base-font-color;\n}\n\na {\n\tcolor: $primary-color;\n\n}\n\nul,li {\n\tlist-style: none;\n}\n\ninput, textarea, button {\n\t@include border-radius(0px);\n}\n\n",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"/* Navbar */\n\n.navbar{\n\twidth:90%;\n\tmargin:auto;\n\t@include add-border(1px, #e7e7e7, 'right-left');\n\tborder-color:#e7e7e7;\n\tmin-height:60px;\n\tbackground:#fff;\n\tmargin-bottom:30px;\n\t\n\ta{\n\t\tcolor:$primary-color !important;\n\t\tfont-size:20px;\n\t\tletter-spacing:-0.5px;\n\t\tpadding-bottom:24px !important;\n\t\tpadding-top:20px !important;\n\t}\n\t\n}\n\n.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{\n\tbackground:$primary-color !important;\n\tcolor:#fff !important;\n}",
+		"",
+		""
+	],
+	"mappings": "AAAA;;EAEE;AAEF,gDAAgD;ACJhD,iBAAiB;AAOjB,uBAAuB;ACPvB,YAAY;;ACAZ,AAAA,EAAE,EAAC,AAAA,EAAE,EAAC,AAAA,EAAE,EAAC,AAAA,EAAE,EAAC,AAAA,EAAE,CAAC;EACd,UAAU,EAAE,CAAE;CACd;;;AAED,AAAA,YAAY,CAAA;EACX,UAAU,EAAE,IAAK;CACjB;;;ACND,AAAA,IAAI,CAAC;EACJ,WAAW,EHEO,UAAU,EAAG,UAAU,EAAG,eAAe,EAAE,UAAU;EGDvE,SAAS,EHAM,IAAI;EGCnB,WAAW,EAAE,KAAM;EACnB,KAAK,EHAY,OAAO;CGCxB;;;AAED,AAAA,CAAC,CAAC;EACD,KAAK,EHCU,OAAO;CGCtB;;;AAED,AAAA,EAAE,EAAC,AAAA,EAAE,CAAC;EACL,UAAU,EAAE,IAAK;CACjB;;;AAED,AAAA,KAAK,EAAE,AAAA,QAAQ,EAAE,AAAA,MAAM,CAAC;EFZvB,kBAAkB,EEaK,GAAG;EFZ1B,qBAAqB,EEYE,GAAG;EFX1B,aAAa,EEWU,GAAG;CAC1B;;AJPD,0CAA0C;AAQ1C,kCAAkC;AUnBlC,YAAY;;AAEZ,AAAA,OAAO,CAAA;EACN,KAAK,EAAC,GAAI;EACV,MAAM,EAAC,IAAK;ER0BX,YAAY,EQzBO,GAAG,CRyBF,KAAK,CQzBD,OAAO;ER0B/B,WAAW,EQ1BQ,GAAG,CR0BH,KAAK,CQ1BA,OAAO;EAChC,YAAY,EAAC,OAAQ;EACrB,UAAU,EAAC,IAAK;EAChB,UAAU,EAAC,IAAK;EAChB,aAAa,EAAC,IAAK;CAUnB;;;AAjBD,AASC,OATM,CASN,CAAC,CAAA;EACA,KAAK,ETHS,OAAO,CSGA,UAAU;EAC/B,SAAS,EAAC,IAAK;EACf,cAAc,EAAC,MAAO;EACtB,cAAc,EAAC,eAAgB;EAC/B,WAAW,EAAC,eAAgB;CAC5B;;;AAIF,AAAoC,eAArB,CAAC,WAAW,GAAG,EAAE,GAAG,CAAC,AAAA,MAAM,EAAE,AAAoC,eAArB,CAAC,WAAW,GAAG,EAAE,GAAG,CAAC,AAAA,MAAM,EAAE,AAAwC,eAAzB,CAAC,WAAW,GAAG,OAAO,GAAG,CAAC,EAAE,AAAyC,eAA1B,CAAC,WAAW,GAAG,OAAO,GAAG,CAAC,AAAA,MAAM,EAAE,AAAyC,eAA1B,CAAC,WAAW,GAAG,OAAO,GAAG,CAAC,AAAA,MAAM,CAAA;EAClO,UAAU,ETbK,OAAO,CSaI,UAAU;EACpC,KAAK,EAAC,eAAgB;CACtB",
+	"names": []
+}
